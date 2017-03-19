@@ -18,15 +18,28 @@ function increaseRankBy(n){
   }
 }
 
+// function deepestChild(){
+//   var element = document.getElementById('grand-node');
+//   var currentDiv;
+//   var nextDiv = element;
+//
+//   while(nextDiv !== null){
+//     currentDiv = nextDiv
+//     nextDiv = currentDiv.querySelector('div')
+//   }
+//
+//   return currentDiv //.innerHTML
+// }
+
 function deepestChild(){
   var element = document.getElementById('grand-node');
-  var currentDiv;
-  var nextDiv = element;
+  var currentNode;
+  var nextNode = element.children[0];
 
-  while(nextDiv !== null){
-    currentDiv = nextDiv
-    nextDiv = currentDiv.querySelector('div')
+  while(nextNode){
+    currentNode = nextNode
+    nextNode = currentNode.children[0]
   }
 
-  return currentDiv //.innerHTML
+  return currentNode //.innerHTML
 }
